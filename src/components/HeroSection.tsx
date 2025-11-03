@@ -2,7 +2,7 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useState, useEffect } from "react";
-import { ShoppingCart, Search, Tag, Box } from "lucide-react";
+import { ShoppingCart, Search, Tag, Box ,Users } from "lucide-react";
 
 export default function HeroSection() {
 
@@ -85,16 +85,21 @@ export default function HeroSection() {
       {/* subtitle */}
       <motion.p
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-       
-        
+        animate={{ opacity: 1 }}      
         className="text-gray-600 text-lg mt-5 max-w-2xl mx-auto"
       >
         Your one-stop place for 3D models and creative assets.
         <br /> Be part of the creator community today.
       </motion.p>
 
-     
+     <motion.div
+  style={{ y: moveIcons }}
+  animate={{ y: [0, 20, 0] }}
+  transition={{ duration: 3.4, repeat: Infinity, ease: "easeInOut" }}
+  className="absolute bottom-10 left-1/2 transform -translate-x-1/2 bg-white shadow-md rounded-full p-3"
+>
+  <Users className="w-6 h-6 text-purple-500" />
+</motion.div>
       <motion.button
         initial={{ scale: 0.9, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
