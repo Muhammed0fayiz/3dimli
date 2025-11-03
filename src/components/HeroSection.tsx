@@ -18,7 +18,7 @@ export default function HeroSection() {
   const { scrollYProgress } = useScroll();
 
 const moveIcons = useTransform(scrollYProgress, [0, 1], [0, 300]);
-  // text typing animation
+
   useEffect(() => {
     const text = lines[currentLine];
     let timer: string | number | NodeJS.Timeout | undefined;
