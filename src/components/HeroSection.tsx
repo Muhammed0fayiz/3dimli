@@ -86,7 +86,8 @@ export default function HeroSection() {
       <motion.p
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 0.8 }}
+       
+        
         className="text-gray-600 text-lg mt-5 max-w-2xl mx-auto"
       >
         Your one-stop place for 3D models and creative assets.
