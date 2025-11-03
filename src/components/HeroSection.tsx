@@ -16,8 +16,8 @@ export default function HeroSection() {
   const [deleting, setDeleting] = useState(false);
 
   const { scrollYProgress } = useScroll();
-  const moveIcons = useTransform(scrollYProgress, [0, 1], [0, 140]);
 
+const moveIcons = useTransform(scrollYProgress, [0, 1], [0, 300]);
   // text typing animation
   useEffect(() => {
     const text = lines[currentLine];
@@ -103,7 +103,7 @@ export default function HeroSection() {
       <motion.button
         initial={{ scale: 0.9, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
-        transition={{ delay: 1.3, duration: 0.7 }}
+     
         onClick={() => console.log("Explore clicked")}
         className="mt-10 bg-gradient-to-r from-blue-700 to-indigo-700 hover:opacity-90 text-white text-lg font-semibold px-8 py-3 rounded-full shadow-md"
       >
